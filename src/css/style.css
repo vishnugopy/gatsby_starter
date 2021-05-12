@@ -80,6 +80,10 @@ body {
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
+  text-align: center;
+  padding: 10% 2%;
+  text-decoration: none;
+  background: rgb(197, 239, 251);
 }
 
 hr {
@@ -376,4 +380,41 @@ a:focus {
   padding: 1% 1.8%;
   border-radius: 5px;
   text-decoration: none;
+}
+
+aside{
+  border: 1px solid rgba(18, 140, 255, 0.397);
+  padding: 2%;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  width: 30%;
+  border-radius: 15px;
+  margin: 2%;
+}
+
+.tagsbloc{
+  display: flex;
+  flex-direction: column;
+}
+
+aside .tagsbloc a {
+  border-radius: 5px;
+  background: #119bdb3f;
+  color: var(--color-primary);
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin: 1% 0%;
+  padding: 1.5% 1%;
+  text-transform: capitalize;
+}
+
+aside .tagsbloc a:hover{
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+aside h2{
+  margin: 1%;
 }
