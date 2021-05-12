@@ -51,9 +51,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
         <hr />
 
-        <footer>
           <Bio />
-        </footer>
       </article>
 
       <nav className="blog-post-nav">

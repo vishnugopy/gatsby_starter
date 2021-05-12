@@ -257,10 +257,22 @@ a:focus {
 
 .main-heading {
   color: #13a7ec;
-  font-family: var(--font-heading);
+  font-family: 'Mulish' , sans-serif;
+  font-weight: 700;
   font-size: var(--fontSize-7);
+  letter-spacing: 6px;
+  font-style: italic;
   margin: 0;
+  text-transform: uppercase;
+  text-shadow:    1px 2px 0px #46b59b, 
+                  2px 3px 0px #017e7f, 
+                  3px 4px 0px #052939, 
+                  4px 5px 0px #1abbc1, 
+                  5px 6px 0px #2b1ac1, 
+                  6px 7px 0px #1a70c1;
+                
 }
+
 
 .post-list-item {
   margin-bottom: var(--spacing-8);
@@ -326,6 +338,15 @@ a:focus {
 .blog-post-nav ul {
   margin: var(--spacing-0);
 }
+.blog-post-nav ul li{
+ padding: 2%;
+ border: 1px solid black;
+ border-radius: 5px;
+}
+
+.blog-post-nav ul li a{
+  text-decoration:none ;
+}
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
@@ -341,6 +362,10 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+
+  aside{
+    display: none;
   }
 }
 
@@ -372,6 +397,8 @@ a:focus {
 
 .logomain{
   width: 100px;
+  border-radius: 50%;
+  margin: 1% 2% ;
 }
 
 .more-link{
@@ -388,9 +415,10 @@ aside{
   position: fixed;
   top: 10%;
   right: 0;
-  width: 30%;
+  width: 25%;
   border-radius: 15px;
   margin: 2%;
+  background: rgba(255, 255, 255, 0.192);
 }
 
 .tagsbloc{
@@ -401,11 +429,12 @@ aside{
 aside .tagsbloc a {
   border-radius: 5px;
   background: #119bdb3f;
+  border: 1px solid rgba(0, 0, 0, 0.274);
   color: var(--color-primary);
   text-decoration: none;
   width: 100%;
   text-align: center;
-  margin: 1% 0%;
+  margin: 3% 0%;
   padding: 1.5% 1%;
   text-transform: capitalize;
 }
@@ -413,8 +442,10 @@ aside .tagsbloc a {
 aside .tagsbloc a:hover{
   color: #ffffff;
   background: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.274);
 }
 
 aside h2{
   margin: 1%;
 }
+
