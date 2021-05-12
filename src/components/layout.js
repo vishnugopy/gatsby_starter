@@ -20,6 +20,16 @@ const Layout = ({ isHomePage, children }) => {
         description
       }
     }
+    allWpPost(sort: {fields: date, order: DESC}, limit: 5) {
+      edges {
+        node {
+          id
+          date
+          link
+          title
+        }
+      }
+    }
     }
       
     
@@ -27,9 +37,8 @@ const Layout = ({ isHomePage, children }) => {
   const title = data.wp.generalSettings.title;
   const tagline = data.wp.generalSettings.description;
   const tags = data.wpPost.tags.nodes;
+  const recents = data.allWpPost.edges;
 
-  console.log(tags);
-console.log(title);
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
       <header className="global-header">
@@ -57,8 +66,10 @@ console.log(title);
       </footer>
       <aside>
         <div className="tagsbloc">
-        <h2>Tags</h2>
+        <h3>Tags</h3>
         {tags.map((tag) => <Link to={tag.link} key={tag.id}>{tag.name}</Link> )}
+        <h3>Recent Posts</h3>
+        {recents.map((recent) => <Link to={recent.node.link} key={recent.node.id}>{recent.node.title}</Link> )}
         </div>
         </aside>
     </div>
