@@ -34,9 +34,9 @@ const PageTemplate = ({ data: { page } }) => {
 
         <hr />
 
-        <footer>
+  
           <Bio />
-        </footer>
+    
       </article>
     </Layout>
   )

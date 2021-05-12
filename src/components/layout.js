@@ -5,13 +5,11 @@ import Navigation from "./navigation"
 const Layout = ({ isHomePage, children }) => {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
-      wpPost {
-        tags {
-          nodes {
-            link
-            name
-            id
-          }
+      allWpTag {
+        nodes {
+          id
+          link
+          name
         }
       }
     wp {
@@ -30,14 +28,22 @@ const Layout = ({ isHomePage, children }) => {
         }
       }
     }
+    allWpCategory {
+      nodes {
+        id
+        link
+        name
+      }
+    }
     }
       
     
   `)
   const title = data.wp.generalSettings.title;
   const tagline = data.wp.generalSettings.description;
-  const tags = data.wpPost.tags.nodes;
+  const tags = data.allWpTag.nodes;
   const recents = data.allWpPost.edges;
+  const Categories = data.allWpCategory.nodes;
 
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
@@ -70,6 +76,8 @@ const Layout = ({ isHomePage, children }) => {
         {tags.map((tag) => <Link to={tag.link} key={tag.id}>{tag.name}</Link> )}
         <h3>Recent Posts</h3>
         {recents.map((recent) => <Link to={recent.node.link} key={recent.node.id}>{recent.node.title}</Link> )}
+        <h3>Categories</h3>
+        {Categories.map((Categorie) => <Link to={Categorie.link} key={Categorie.id}>{Categorie.name}</Link> )}
         </div>
         </aside>
     </div>

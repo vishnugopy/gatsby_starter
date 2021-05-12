@@ -413,12 +413,12 @@ aside{
   border: 1px solid rgba(18, 140, 255, 0.397);
   padding: 2%;
   position: fixed;
-  top: 10%;
+  top: 5%;
   right: 0;
   width: 25%;
   border-radius: 15px;
-  margin: 2%;
-  background: rgba(255, 255, 255, 0.192);
+  margin: 1%;
+  background: rgb(255, 255, 255);
 }
 
 .tagsbloc{
@@ -429,12 +429,12 @@ aside{
 aside .tagsbloc a {
   border-radius: 5px;
   background: #119bdb3f;
-  border: 1px solid rgba(0, 0, 0, 0.274);
+  border: 1px solid rgba(0, 38, 255, 0.089);
   color: var(--color-primary);
   text-decoration: none;
   width: 100%;
   text-align: center;
-  margin: 3% 0%;
+  margin: 1% 0%;
   padding: 1.5% 1%;
   text-transform: capitalize;
 }
@@ -445,7 +445,10 @@ aside .tagsbloc a:hover{
   border: 1px solid rgba(255, 255, 255, 0.274);
 }
 
-aside h2{
+aside h3{
   margin: 1%;
+}
+aside .tagsbloc a:last-child{
+  display: none;
 }
 
